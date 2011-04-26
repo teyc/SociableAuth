@@ -8,7 +8,7 @@
 | Password to access the WebSecurity module.
 |
 */
-$config['root_password']	= '$2a$15$owRpBhm8EGZFQwb3XNjJ6Oyjt9/87C0MOAn.wy31C7GzRq7YF1ySK';
+$config['root_password']	= '';
 
 /*
 |--------------------------------------------------------------------------
