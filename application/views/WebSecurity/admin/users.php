@@ -1,7 +1,7 @@
 <h1>User Management</h1>
 
 <form action="<?php echo site_url('/websecurity/search_user'); ?>">
-    <p>Search user <input type="text" name="user" value="<?= isset($search)? $search : ''; ?>" /></p>              
+    <p>Search user <input type="text" name="user" value="<?php echo isset($search)? $search : ''; ?>" /></p>              
 </form>
 
 <table>
@@ -15,10 +15,10 @@
 <?php foreach ($users as $user): ?>
     <tr>
         <td>
-        <?= $user->UserId ?>
+        <?php echo $user->UserId ?>
         </td>
         <td>
-        <?= $user->UserName ?>
+        <?php echo $user->UserName ?>
         </td>        
         <td>
             <input type="submit" value="Delete User" />            

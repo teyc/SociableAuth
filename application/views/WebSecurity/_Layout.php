@@ -117,12 +117,12 @@
                 
                 <ul class="nav">
                 <?php if (isset($is_root_user) && $is_root_user): ?>
-                    <li><a href="<?= site_url('/websecurity_test/') ?>">Test Page</a></li>
-                    <li><a href="<?= site_url('/websecurity/users') ?>">Users</a></li>
-                    <li><a href="<?= site_url('/websecurity/roles') ?>">Roles</a></li>
-                    <li><a href="<?= site_url('/websecurity/setup_openid') ?>">OpenID</a></li>
-                    <li><a href="<?= site_url('/websecurity/quickstart') ?>">Quick Start</a></li>
-                    <li><a href="<?= site_url('/websecurity/logout_root_user') ?>">Log Out</a></li>
+                    <li><a href="<?php echo  site_url('/websecurity_test/') ?>">Test Page</a></li>
+                    <li><a href="<?php echo  site_url('/websecurity/users') ?>">Users</a></li>
+                    <li><a href="<?php echo  site_url('/websecurity/roles') ?>">Roles</a></li>
+                    <li><a href="<?php echo  site_url('/websecurity/setup_openid') ?>">OpenID</a></li>
+                    <li><a href="<?php echo  site_url('/websecurity/quickstart') ?>">Quick Start</a></li>
+                    <li><a href="<?php echo  site_url('/websecurity/logout_root_user') ?>">Log Out</a></li>
                 <?php endif; // is_root_user ?>
                     <li style="float:right">Help</li>
                 </ul>

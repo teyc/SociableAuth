@@ -34,7 +34,7 @@
         
     </head>
     <body>
-        <form action="<?= site_url('websecurity/login') ?>" method="post">
+        <form action="<?php echo site_url('websecurity/login') ?>" method="post">
             <h2>Log In to CodeIgniter Site</h2>
             
             <?php if (!empty($message)): ?>
@@ -56,7 +56,7 @@
                 Remember me
             </div>
         
-            <input type="hidden" name="return_to" value="<?= isset($return_to)?$return_to: '' ?>" />
+            <input type="hidden" name="return_to" value="<?php echo isset($return_to)?$return_to: '' ?>" />
             <input type="submit" name="Login" value="Login" />
         
         </form>
@@ -64,7 +64,7 @@
         <p>or</p>
         
         <!-- Simple OpenID Selector -->
-        <form action="<?= site_url('/websecurity/openid').(isset($return_to)?'?return_to='.htmlentities($return_to):'') ?>" method="get" id="openid_form">
+        <form action="<?php echo site_url('/websecurity/openid').(isset($return_to)?'?return_to='.htmlentities($return_to):'') ?>" method="get" id="openid_form">
             <input type="hidden" name="action" value="verify" />
             <fieldset>
                 <legend>Sign-in or Create New Account</legend>

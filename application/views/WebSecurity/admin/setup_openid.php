@@ -20,7 +20,7 @@
                 <b>OpenIdUrl</b>,
         </p>
         <p>
-            <form action="<?= site_url('/websecurity/create_openid_tables') ?>" method="post">
+            <form action="<?php echo site_url('/websecurity/create_openid_tables') ?>" method="post">
             Click <input type="submit" value="Set up database tables" />                             
             </form>
         </p>
@@ -51,7 +51,7 @@
     <div class="list-description">
         <h2>Review and Test OpenId Sign On</h2>
         <p>
-            Go to the <a href="<?= site_url('/websecurity/login'); ?>">Login screen</a> and click on an OpenID provider icon 
+            Go to the <a href="<?php echo site_url('/websecurity/login'); ?>">Login screen</a> and click on an OpenID provider icon 
             (such as Facebook, Google or Hotmail).
         </p>
         <p>

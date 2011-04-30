@@ -33,12 +33,12 @@
                 <p> Copy and paste the following into the <code>application/config/websecurity.php</code>.
                     <div><?php echo($hash); ?></div>                    
                 </p>
-                <p>Then proceed to login: <a href="<?= site_url('/websecurity/quickstart'); ?>">Login page</a></p>
+                <p>Then proceed to login: <a href="<?php echo site_url("/websecurity/quickstart"); ?>">Login page</a></p>
         <?php endif;?>
 
     <?php else: //root_password_saved ?>
                 
-        <form action="<?= site_url('/websecurity/login_root_user'); ?>" method="post">                
+        <form action="<?php echo(site_url('/websecurity/login_root_user')); ?>" method="post">                
         <label for="password">Password</label>
         <input id="password" name="password" type="password" /><br/>
         <input type="submit" name="LoginRootUser" value="Login" />                    
@@ -69,14 +69,14 @@
                 </p>
                 <p>
                     Create table <b>Users</b> with columns:<br/>
-                        <b><?= $this->config->item('useridcolumn', 'websecurity') ?></b>,
-                        <b><?= $this->config->item('usernamecolumn', 'websecurity') ?></b>,
+                        <b><?php echo($this->config->item('useridcolumn', 'websecurity')); ?></b>,
+                        <b><?php echo($this->config->item('usernamecolumn', 'websecurity')); ?></b>,
                         <b><?php echo(join('</b>, <b>', $this->config->item('userprofiles', 'websecurity'))) ?></b>;
                     <br />
                 </p>
                 <p>You can add/remove profile items by modifying<br /> <code>application/config/websecurity.php</code></p>
                 <p>
-                    <form action="<?= site_url('/websecurity/create_database_tables'); ?>" method="post">
+                    <form action="<?php echo(site_url("websecurity/create_database_tables")); ?>" method="post">
                     Click <input type="submit" value="Set up database tables" />                             
                     </form>
                 </p>

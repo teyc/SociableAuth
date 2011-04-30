@@ -37,11 +37,11 @@
         <h1>Create your account</h1>
         <h2>CodeIgniter Site account creation</h2>
         
-        <?= form_open('websecurity/register') ?>
+        <?php echo form_open('websecurity/register') ?>
         
         <div>
             <label for="username">User Name</label>
-            <input type="text" name="username" id="username" value="<?= set_value('username')?>" size="20" />
+            <input type="text" name="username" id="username" value="<?php echo set_value('username')?>" size="20" />
         </div>
         
         <div>

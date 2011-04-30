@@ -31,7 +31,7 @@
             <img src="/images/403.gif" align="middle"/>
             <div style="display:inline-block;">
                 <h2>Oops!</h2>
-                <p><?= $message ?></p>
+                <p><?php echo $message ?></p>
                 <p><a href="javascript:history.go(-1);">Go Back</a></p>
             </div>
         </div>

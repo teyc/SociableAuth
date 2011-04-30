@@ -165,7 +165,7 @@ class WebSecurity extends CI_Controller
 
         $this->config->load('websecurity', true);
         $this->load->library('websecuritylib');
-        $this->websecuritylib->InitializeDatabaseConnection(
+        $success = $this->websecuritylib->InitializeDatabaseConnection(
             $this->config->item('usertablename', 'websecurity'),
             $this->config->item('useridcolumn', 'websecurity'),
             $this->config->item('usernamecolumn', 'websecurity'),
