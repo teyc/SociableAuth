@@ -46,7 +46,7 @@ class WebSecurity extends CI_Controller
     
     function login()
     {
-        $this->load->library('websecuritylib');
+        $this->load->library('WebSecurityLib');
         if ($this->websecuritylib->IsAuthenticated)
         {
             $this->load->helper('url');
@@ -80,7 +80,7 @@ class WebSecurity extends CI_Controller
     
     function logout()
     {
-        $this->load->library('websecuritylib');
+        $this->load->library('WebSecurityLib');
         $this->websecuritylib->logout();
         $this->load->helper('url');
         redirect($_SERVER['HTTP_REFERER']);
@@ -149,7 +149,7 @@ class WebSecurity extends CI_Controller
     
     private function database_tables_exist()
     {
-        $this->load->library('websecuritylib');
+        $this->load->library('WebSecurityLib');
         $success = $this->websecuritylib->TablesInitialized();
         return $success;
     }
@@ -164,7 +164,7 @@ class WebSecurity extends CI_Controller
         }
 
         $this->config->load('websecurity', true);
-        $this->load->library('websecuritylib');
+        $this->load->library('WebSecurityLib');
         $success = $this->websecuritylib->InitializeDatabaseConnection(
             $this->config->item('usertablename', 'websecurity'),
             $this->config->item('useridcolumn', 'websecurity'),
