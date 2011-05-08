@@ -201,7 +201,7 @@ class WebSecurity extends CI_Controller
         }
         
         $this->load->helper('url');
-        redirect('/websecurity/openid');        
+        redirect('/websecurity/setup_openid');        
     }
     
     function create_role()
@@ -282,11 +282,14 @@ class WebSecurity extends CI_Controller
             return;
         }
     
+        $this->config->load('websecurity', true);
+        
         $this->load->helper('url');
         $this->load->view('/WebSecurity/_Layout', 
             array("main"                  => "/WebSecurity/admin/setup_openid", 
                   "database_tables_exist" => $this->openid_tables_exist(),
-                  "is_root_user"          => $this->is_root_user()
+                  "is_root_user"          => $this->is_root_user(),
+                  "openid_enabled"        => $this->config->item('openid_enabled', 'websecurity')
                   ));
     }
     

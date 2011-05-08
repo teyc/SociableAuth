@@ -53,4 +53,37 @@ $config['usernamecolumn']    = 'UserName';
 
 $config['userprofiles']    = array('Email', 'FirstName', 'LastName', 'Twitter');
 
+/*
+|--------------------------------------------------------------------------
+| Enable OpenID
+|--------------------------------------------------------------------------
+|
+| Permit OpenID authentication
+|
+*/
+
+$config['enable_openid']   = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Enable Twitter
+|--------------------------------------------------------------------------
+|
+| Permit OpenID authentication
+|
+*/
+
+$config['enable_twitter']   = FALSE;
+
+/*
+|--------------------------------------------------------------------------
+| Enable Facebook
+|--------------------------------------------------------------------------
+|
+| Permit OpenID authentication
+|
+*/
+
+$config['enable_facebook']   = FALSE;
+
 ?>

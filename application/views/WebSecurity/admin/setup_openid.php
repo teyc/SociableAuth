@@ -34,11 +34,18 @@
     </p>
     <div class="list-description">
         <h2>Enable/Disable OpenID</h2>
+        <?php 
+            $status    = $openid_enabled? 'enabled'        : 'disabled';
+            $action    = $openid_enabled? 'Disable OpenID' : 'Enable OpenID';
+            $newstatus = $openid_enabled? '0'              : '1';
+        ?>
         <p>
             <i>OpenID is currently disabled.</i><br />
         </p>
         <p>
-            Click to <input type="submit" value="Enable OpenID" />                             
+        <form action="<?php echo site_url('/websecurity/setup_openid/status/'.$newstatus) ?>">
+            Click to <input type="submit" value="<?php echo $action; ?>" />                             
+        </form>
         </p>
     </div>
 </div>
