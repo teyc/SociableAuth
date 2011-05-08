@@ -2,10 +2,10 @@
 
 class WebSecurity extends CI_Controller
 {
-    function __construct() {#<-PHP5 - __construct(); PHP4 - class name()
+    function __construct() {#<-PHP5 - __construct(); PHP4 - class name()        
 		parent::__construct();
-		#enable query strings for this class
-        if ($_SERVER['PATH_INFO'] === 'websecurity/openid_return')
+        #enable query strings for this class
+        if ($this->uri->segment(2) === 'openid_return')
         {
 		    parse_str($_SERVER['QUERY_STRING'],$_GET);
         }
